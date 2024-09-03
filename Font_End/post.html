@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postbook</title>
+    <link rel="stylesheet" href="./postStyle.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Hello, <span id="logged-username">UserName</span></h1>
+        <button onclick="logOut()" class="loggedOut-btn">Logged out</button>
+    </div>
+    
+    <article>
+        <section id="add-post-container">
+            <h2>Add new post</h2>
+            <textarea 
+            name="" 
+            id="newPost-text" 
+            cols="40" 
+            rows="5"></textarea>
+    
+            <div>
+                <input type="text" name="newPost-img" id="newPost-img" placeholder="Add new post image">
+            </div>
+            <div>
+                <button onclick="handleAddNewPost()" class="newPost-btn">Post</button>
+            </div>
+        </section>
+    </article>
+
+     <section id="post-container">
+       
+        <!-- Post -->
+         <div class="post">
+            <div class="post-header">
+                <div class="post-user-image">
+                  <img class="img" src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1724604803~exp=1724608403~hmac=10283f5bc4933e1882c1675916eca8843bbf4793520c07b3148ad140163ff1ae&w=1060" alt="post-user-image">
+                </div>
+
+                <div class="post-username-time">
+                    <div class="post-username">
+                       <p>Julhas Mia</p>
+                    </div>
+
+                    <div class="posted-time">
+                        <span>13</span>
+                        <span> Hours ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dicta voluptatibus facilis nostrum aspernatur itaque necessitatibus sed eius eveniet rerum numquam similique molestias tempore voluptates atque delectus, eum aliquid in hic quasi ut nulla voluptatum adipisci. Voluptatem harum reprehenderit laudantium quis, inventore sed autem possimus eligendi aperiam accusamus nobis omnis.</p>
+            </div>
+
+            <div class="post-image">
+                <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1724604803~exp=1724608403~hmac=10283f5bc4933e1882c1675916eca8843bbf4793520c07b3148ad140163ff1ae&w=1060" alt="">
+            </div>
+
+            <!-- commant after single post -->
+             <div class="comment-holder">
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+             </div>
+
+             <!-- new comment input field -->
+              <div class="post-comment-holder">
+                <div class="post-comment-input-field-holder">
+                    <input type="text" placeholder="comment about this post" id="postcomment-input-for-postId1" class="post-comment-input-field">
+                </div>
+                <div class="comment-btn-holder">
+                    <button id="comment-btn" class="postcomment-btn">
+                        comment
+                    </button>
+                </div>
+              </div>
+         </div>
+
+         <!-- Post -->
+         <div class="post">
+            <div class="post-header">
+                <div class="post-user-image">
+                  <img class="img" src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1724604803~exp=1724608403~hmac=10283f5bc4933e1882c1675916eca8843bbf4793520c07b3148ad140163ff1ae&w=1060" alt="post-user-image">
+                </div>
+
+                <div class="post-username-time">
+                    <div class="post-username">
+                       <p>Julhas Mia</p>
+                    </div>
+
+                    <div class="posted-time">
+                        <span>13</span>
+                        <span> Hours ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dicta voluptatibus facilis nostrum aspernatur itaque necessitatibus sed eius eveniet rerum numquam similique molestias tempore voluptates atque delectus, eum aliquid in hic quasi ut nulla voluptatum adipisci. Voluptatem harum reprehenderit laudantium quis, inventore sed autem possimus eligendi aperiam accusamus nobis omnis.</p>
+            </div>
+
+            <div class="post-image">
+                <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1724604803~exp=1724608403~hmac=10283f5bc4933e1882c1675916eca8843bbf4793520c07b3148ad140163ff1ae&w=1060" alt="">
+            </div>
+
+            <!-- commant after single post -->
+             <div class="comment-holder">
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+             </div>
+
+             <!-- new comment input field -->
+              <div class="post-comment-holder">
+                <div class="post-comment-input-field-holder">
+                    <input type="text" placeholder="comment about this post" id="postcomment-input-for-postId1" class="post-comment-input-field">
+                </div>
+                <div class="comment-btn-holder">
+                    <button id="comment-btn" class="postcomment-btn">
+                        comment
+                    </button>
+                </div>
+              </div>
+         </div>
+
+         <!-- Post -->
+         <div class="post">
+            <div class="post-header">
+                <div class="post-user-image">
+                  <img class="img" src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1724604803~exp=1724608403~hmac=10283f5bc4933e1882c1675916eca8843bbf4793520c07b3148ad140163ff1ae&w=1060" alt="post-user-image">
+                </div>
+
+                <div class="post-username-time">
+                    <div class="post-username">
+                       <p>Julhas Mia</p>
+                    </div>
+
+                    <div class="posted-time">
+                        <span>13</span>
+                        <span> Hours ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dicta voluptatibus facilis nostrum aspernatur itaque necessitatibus sed eius eveniet rerum numquam similique molestias tempore voluptates atque delectus, eum aliquid in hic quasi ut nulla voluptatum adipisci. Voluptatem harum reprehenderit laudantium quis, inventore sed autem possimus eligendi aperiam accusamus nobis omnis.</p>
+            </div>
+
+            <div class="post-image">
+                <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1724604803~exp=1724608403~hmac=10283f5bc4933e1882c1675916eca8843bbf4793520c07b3148ad140163ff1ae&w=1060" alt="">
+            </div>
+
+            <!-- commant after single post -->
+             <div class="comment-holder">
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="commet-user-image">
+                        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    </div>
+                    <div class="comment-text-container">
+                         <h4>comment user name</h4>
+                         <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo sequi ab magnam harum. Vel!</p>
+                    </div>
+                </div>
+             </div>
+
+             <!-- new comment input field -->
+              <div class="post-comment-holder">
+                <div class="post-comment-input-field-holder">
+                    <input type="text" placeholder="comment about this post" id="postcomment-input-for-postId1" class="post-comment-input-field">
+                </div>
+                <div class="comment-btn-holder">
+                    <button id="comment-btn" class="postcomment-btn">
+                        comment
+                    </button>
+                </div>
+              </div>
+         </div> 
+     </section>
+     
+
+     <script src="./JS/utils/calculateTimeDifference.js"></script>
+     <script src="./JS/fetchData.js"></script>
+</body>
+</html>
